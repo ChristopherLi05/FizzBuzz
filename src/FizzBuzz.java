@@ -6,19 +6,19 @@ class FizzBuzz {
     public static void main(String[] args) {
         int i = 1;
         while (i < 100) {
-
-            // Find out which numbers divide i.
-            boolean divisibleBy3 = i % 3 == 0;
-            boolean divisibleBy5 = i % 5 == 0;
-
             // Print our appropriate result.
-            doFizzBuzz(divisibleBy3, divisibleBy5, i);
+            doFizzBuzz(i);
 
             i++;
         }
     }
 
-    private static void doFizzBuzz(boolean divisibleBy3, boolean divisibleBy5, int i) {
+    public static void doFizzBuzz(int i) {
+        // Find out which numbers divide i.
+        boolean divisibleBy3 = i % 3 == 0;
+        boolean divisibleBy5 = i % 5 == 0;
+
+
         if (divisibleBy3 && divisibleBy5) {
 
             System.out.println("Fizz Buzz");
